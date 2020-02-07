@@ -6,4 +6,7 @@ export default {
   routes: [
     { path: '/', component: './index' },
   ],
+  ga: {
+    code: 'testId'
+  }
 } as IConfig;
