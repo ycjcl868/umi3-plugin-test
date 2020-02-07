@@ -1,11 +1,11 @@
 import { join } from 'path';
-import { existsSync } from 'fs';
 import { Service } from 'umi';
 import { render } from '@testing-library/react';
 
-const cwd = join(__dirname, './fixtures');
+const fixtures = join(__dirname, './fixtures');
 
-test('test getUserName export', async () => {
+test('normal', async () => {
+  const cwd = join(fixtures, 'normal');
   const service = new Service({
     cwd,
     plugins: [require.resolve('./')],
@@ -16,7 +16,6 @@ test('test getUserName export', async () => {
       _: ['g', 'tmp'],
     },
   });
-  expect(existsSync(join(cwd, '.umi-test', 'core', 'umiExports.ts'))).toEqual(true);
 
   const reactNode = require(join(cwd, '.umi-test', 'umi.ts')).default;
   const { container } = render(reactNode);

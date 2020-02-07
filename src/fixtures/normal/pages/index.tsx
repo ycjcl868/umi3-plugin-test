@@ -1,7 +1,6 @@
-import { getUserName } from 'umi';
+import { getUserName } from '../.umi-test/plugin-utils/utils';
 import React from 'react';
 
 export default function() {
-  console.log('ewqfqwefwq', require.resolve('umi'));
   return <h1>{getUserName('Hello World')}</h1>;
 }
