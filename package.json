@@ -1,0 +1,37 @@
+{
+  "name": "umi3-plugin-demo",
+  "version": "0.0.1",
+  "description": "",
+  "authors": {
+    "name": "",
+    "email": ""
+  },
+  "repository": "/umi3-plugin-demo",
+  "peerDependencies": {
+    "umi": "^3.0.0-beta.7"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "cross-env APP_ROOT=$PWD/example umi dev",
+    "build": "father-build",
+    "test": "umi-test",
+    "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/react-hooks": "^3.2.1",
+    "@types/jest": "^25.1.2",
+    "@umijs/test": "^3.0.0-beta.1",
+    "@umijs/types": "^3.0.0-beta.7",
+    "cross-env": "^6.0.3",
+    "father-build": "^1.8.0",
+    "np": "^5.0.3",
+    "umi": "^3.0.0-beta.7"
+  },
+  "files": [
+    "lib",
+    "src",
+    "ui"
+  ],
+  "license": "MIT"
+}
